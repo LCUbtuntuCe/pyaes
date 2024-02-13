@@ -199,7 +199,8 @@ class AES(object):
                                   self.U2[(tt >> 16) & 0xFF] ^
                                   self.U3[(tt >>  8) & 0xFF] ^
                                   self.U4[ tt        & 0xFF])
-
+                       
+###################################################################################################################
     def encrypt(self, plaintext):
         'Encrypt a block of plain text using the AES block cipher.'
 
@@ -233,7 +234,9 @@ class AES(object):
             result.append((self.S[ t[(i + s3) % 4]        & 0xFF] ^  tt       ) & 0xFF)
 
         return result
+############################################################################################################################################
 
+############################################################################################################################################
     def decrypt(self, ciphertext):
         'Decrypt a block of cipher text using the AES block cipher.'
 
@@ -267,7 +270,7 @@ class AES(object):
             result.append((self.Si[ t[(i + s3) % 4]        & 0xFF] ^  tt       ) & 0xFF)
 
         return result
-
+##############################################################################################################################################################
 
 class Counter(object):
     '''A counter object for the Counter (CTR) mode of operation.
