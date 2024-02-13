@@ -140,7 +140,7 @@ AESStreamModeOfOperation._final_encrypt = _stream_final_encrypt
 AESStreamModeOfOperation._final_decrypt = _stream_final_decrypt
 
 
-
+#############################################################################################################################################################
 class BlockFeeder(object):
     '''The super-class for objects to handle chunking a stream of bytes
        into the appropriate block size for the underlying mode of operation
@@ -196,7 +196,7 @@ class Decrypter(BlockFeeder):
     def __init__(self, mode, padding = PADDING_DEFAULT):
         BlockFeeder.__init__(self, mode, mode.decrypt, mode._final_decrypt, padding)
 
-
+####################################################################################################################################################################
 # 8kb blocks
 BLOCK_SIZE = (1 << 13)
 
